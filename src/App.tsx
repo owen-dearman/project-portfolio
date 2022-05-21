@@ -3,6 +3,7 @@ import { Biography } from "./comp/Biography";
 import { Footer } from "./comp/Footer";
 import { Header } from "./comp/Header";
 import { NavBar } from "./comp/NavBar";
+import { Preview } from "./comp/Preview";
 import { ProjectList } from "./comp/ProjectList";
 
 export type navOptions = "home" | "bio" | "projects";
@@ -14,6 +15,7 @@ function App(): JSX.Element {
     <>
       <Header />
       <NavBar setNav={setNav} />
+      {nav === "home" && <Preview />}
       {nav === "bio" && <Biography />}
       {nav === "projects" && <ProjectList />}
       <Footer />
