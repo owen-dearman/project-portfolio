@@ -4,7 +4,7 @@ import p5 from "p5";
 interface IProps {
   name: string;
 }
-class PrintArtVerticalBars extends React.Component {
+class PrintArtCheck extends React.Component {
   private myRef: React.RefObject<HTMLInputElement>;
   private myP5: p5;
 
@@ -14,11 +14,11 @@ class PrintArtVerticalBars extends React.Component {
   }
 
   Sketch = (p: p5): void => {
-    let width = p.windowWidth * 0.9;
+    let width = p.windowWidth;
     let height = p.windowHeight;
     const randArr = [1, 2, 3, 4];
-    const palette = ["#aaff00", "#ffaa00", "#ff00aa", "#aa00ff", "#00aaff"];
-    const gapsize = 20;
+    const palette = ["#8d7966", "#a8a39d", "#d8c8b8", "#e2ddd9", "#f8f1e9"];
+    const gapsize = 18;
 
     p.setup = () => {
       p.createCanvas(width, height);
@@ -39,26 +39,17 @@ class PrintArtVerticalBars extends React.Component {
       }
 
       function drawLines(row: number, column: number) {
-        const r = p.random(randArr);
-        p.strokeWeight(4);
-        if (r === 1) {
-          p.line(row, column, row + gapsize, column + gapsize);
-        } else if (r === 2) {
-          p.line(row + gapsize, column, row, column + gapsize);
-        } else if (r === 3) {
-          p.line(
-            row + gapsize / 2,
-            column,
-            row + gapsize / 2,
-            column + gapsize
-          );
-        } else if (r === 4) {
-          p.line(
-            row,
-            column + gapsize / 2,
-            row + gapsize,
-            column + gapsize / 2
-          );
+        const num = p.random(randArr);
+        p.stroke(p.random(palette));
+        p.strokeWeight(5);
+        if (num === 1) {
+          p.line(row, column, row + gapsize, column);
+        } else if (num === 2) {
+          p.line(row, column + gapsize, row + gapsize, column + gapsize);
+        } else if (num === 3) {
+          p.line(row, column, row, column + gapsize);
+        } else if (num === 4) {
+          p.line(row + gapsize, column, row + gapsize, column + gapsize);
         }
       }
     }
@@ -85,4 +76,4 @@ class PrintArtVerticalBars extends React.Component {
   }
 }
 
-export default PrintArtVerticalBars;
+export default PrintArtCheck;

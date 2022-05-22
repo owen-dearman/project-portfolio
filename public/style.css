@@ -2,6 +2,9 @@ body{
     background-color: rgb(11, 11, 11);
     font-family:Tahoma, Geneva, Verdana, sans-serif;
     color: #c8ff00;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 header{
