@@ -30,6 +30,16 @@ button:hover{
     color: rgb(11,11,11);
 }
 
+.searchBar{
+    background-color: rgb(11,11,11);
+    color: #c8ff00;
+    width: 32.5%;
+    border: 1px solid #c8ff00;
+    padding: 10px 5px;
+    margin-top: 5px;
+    font-size: medium;
+}
+
 .bioContainer{
     display: flex;
     flex-direction: row;
