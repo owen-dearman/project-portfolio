@@ -1,14 +1,6 @@
 import React from "react";
 import p5, { Image } from "p5";
 
-interface circleProps {
-  fill: string;
-  aX: number;
-  bX: number;
-  aY: number;
-  bY: number;
-}
-
 interface IProps {
   name: string;
 }

@@ -60,3 +60,29 @@ button:hover{
     margin: 10px;
     border: 1px solid #c8ff00    
 }
+
+hr{
+    border-color: black;
+}
+
+.projectOverviewContainer{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid #c8ff00;
+    align-items: center;
+}
+
+.overviewImage {
+    width: 50%
+}
+
+.tag{
+    display: inline-flex;
+    background-color: #c8ff00;
+    color: black;
+    padding: 5px 5px;
+    margin: 10px
+}
