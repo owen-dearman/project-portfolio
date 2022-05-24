@@ -39,16 +39,16 @@ export function ProjectList({
 
   return (
     <section>
-      <div style={{textAlign: "center"}}>
-      <h3 style={{ textAlign: "center" }}>Search Featured Projects</h3>
-      <input
-        className="searchBar"
-        type="text"
-        value={searchInput}
-        placeholder="Search Here"
-        onChange={(e) => setSearchInput(e.target.value)}
-      />
-      <button onClick={() => setSearchInput("")}>Clear Search</button>
+      <div style={{ textAlign: "center" }}>
+        <h3 style={{ textAlign: "center" }}>Search Featured Projects</h3>
+        <input
+          className="searchBar"
+          type="text"
+          value={searchInput}
+          placeholder="Search Here"
+          onChange={(e) => setSearchInput(e.target.value)}
+        />
+        <button onClick={() => setSearchInput("")}>Clear Search</button>
       </div>
       <h3 style={{ textAlign: "center" }}>
         Number Of Projects: {projectList.length}
