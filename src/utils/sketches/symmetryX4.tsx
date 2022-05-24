@@ -22,7 +22,7 @@ class SymmetryX4 extends React.Component {
   }
 
   Sketch = (p: p5): void => {
-    let width = p.windowWidth;
+    let width = p.windowWidth * 0.9;
     let height = p.windowHeight;
     const coloursArr = ["#cc0c39", "#e6781e", "#c8cf02", "#f8fcc1", "#1693a7"];
     const circleStore: circleProps[] = [];

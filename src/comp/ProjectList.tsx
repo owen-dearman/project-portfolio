@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { navOptions, projectOptions } from "../App";
+import { filterProjects } from "../utils/filterProjects";
 import { projectDataInterface, projectInformation } from "../utils/projects";
 import { ProjectOverview } from "./ProjectOverview";
 
@@ -23,7 +24,11 @@ export function ProjectList({
     fetchProjectData();
   });
 
-  const projectOverviews = projects.map((p) => (
+  const projectList = projects
+    .filter((p) => filterProjects(p, searchInput))
+    .sort((a, b) => a.title.localeCompare(b.title));
+
+  const projectOverviews = projectList.map((p) => (
     <ProjectOverview
       key={p.id}
       data={p}
@@ -43,9 +48,8 @@ export function ProjectList({
         onChange={(e) => setSearchInput(e.target.value)}
       />
       <button onClick={() => setSearchInput("")}>Clear Search</button>
-      <button>Alphabetical</button>
       <h3 style={{ textAlign: "center" }}>
-        Number Of Projects: {projectOverviews.length}
+        Number Of Projects: {projectList.length}
       </h3>
       <div>{projectOverviews}</div>
     </section>

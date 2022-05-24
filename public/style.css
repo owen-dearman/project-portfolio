@@ -4,7 +4,7 @@ body{
     color: #c8ff00;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    /* overflow-x: auto; */
 }
 
 header{
@@ -67,7 +67,7 @@ hr{
 
 .projectOverviewContainer{
     width: 70%;
-    margin: auto;
+    margin: 30px auto;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -76,6 +76,7 @@ hr{
 }
 
 .overviewImage {
+    justify-content: center;
     width: 50%
 }
 
@@ -83,6 +84,25 @@ hr{
     display: inline-flex;
     background-color: #c8ff00;
     color: black;
-    padding: 5px 5px;
+    padding: 5px;
     margin: 10px
+}
+
+.projectContainer {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projectTitle {
+    font-size: 50px;
+}
+
+.launch{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
 }

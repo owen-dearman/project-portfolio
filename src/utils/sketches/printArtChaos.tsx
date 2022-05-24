@@ -14,7 +14,7 @@ class PrintArtChaos extends React.Component {
   }
 
   Sketch = (p: p5): void => {
-    let width = p.windowWidth;
+    let width = p.windowWidth * 0.9;
     let height = p.windowHeight;
     const randArr = [1, 2, 3, 4, 5, 6];
     const palette = ["#9d9e94", "#c99e93", "#f59d92", "#e5b8ad", "#d5d2c8"];

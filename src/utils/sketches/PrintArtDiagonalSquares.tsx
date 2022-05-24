@@ -14,7 +14,7 @@ class PrintArtDiagonalSquare extends React.Component {
   }
 
   Sketch = (p: p5): void => {
-    let width = p.windowWidth;
+    let width = p.windowWidth * 0.9;
     let height = p.windowHeight;
     const randArr = [1, 2];
     const palette = ["#fdf1cc", "#c6d6b8", "#987f69", "#e3ad40", "#fcd036"];

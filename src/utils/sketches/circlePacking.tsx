@@ -20,7 +20,7 @@ class CirclePacking extends React.Component {
   }
 
   Sketch = (p: p5): void => {
-    let width = p.windowWidth;
+    let width = p.windowWidth * 0.9;
     let height = p.windowHeight;
     const colours = ["#f04155", "#ff823a", "#f2f26f", "#fff7bd", "#95cfb7"];
 

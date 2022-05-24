@@ -14,7 +14,7 @@ class PrintArtCheck extends React.Component {
   }
 
   Sketch = (p: p5): void => {
-    let width = p.windowWidth;
+    let width = p.windowWidth * 0.9;
     let height = p.windowHeight;
     const randArr = [1, 2, 3, 4];
     const palette = ["#8d7966", "#a8a39d", "#d8c8b8", "#e2ddd9", "#f8f1e9"];

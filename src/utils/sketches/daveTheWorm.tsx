@@ -25,7 +25,7 @@ class DaveTheWorm extends React.Component {
   }
 
   Sketch = (p: p5): void => {
-    let width = p.windowWidth;
+    let width = p.windowWidth * 0.9;
     let height = p.windowHeight;
     let worm: wormProps;
     const colours = [

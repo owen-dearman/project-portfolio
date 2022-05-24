@@ -16,14 +16,13 @@ export function ProjectOverview(props: ProjectOverviewProps): JSX.Element {
 
   return (
     <div className="projectOverviewContainer">
-      <h1>{props.data.title}</h1>
+      <h1 className="projectTitle">{props.data.title}</h1>
       <img
         className="overviewImage"
         src={props.data.img[0]}
         alt={`Screenshot of ${props.data.title}`}
       />
       <p>{props.data.artisticDesc}</p>
-      <p>{props.data.reflection}</p>
       <button onClick={() => window.open(props.data.url[0])}>
         Go To Project{" "}
       </button>
@@ -31,7 +30,7 @@ export function ProjectOverview(props: ProjectOverviewProps): JSX.Element {
       <button
         onClick={() => {
           props.setNav("projects");
-          props.setProjectPage("Electric Particles");
+          props.setProjectPage(props.data.project);
         }}
       >
         See More

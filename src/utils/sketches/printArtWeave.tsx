@@ -14,7 +14,7 @@ class PrintArtWeave extends React.Component {
   }
 
   Sketch = (p: p5): void => {
-    let width = p.windowWidth;
+    let width = p.windowWidth * 0.9;
     let height = p.windowHeight;
     const randArr = [1, 2];
     const palette = ["#f8b195", "#f67280", "#c06c84", "#6c5b7b", "#355c7d"];

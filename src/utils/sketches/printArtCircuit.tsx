@@ -14,7 +14,7 @@ class PrintArtCircuit extends React.Component {
   }
 
   Sketch = (p: p5): void => {
-    let width = p.windowWidth;
+    let width = p.windowWidth * 0.9;
     let height = p.windowHeight;
     const randArr = [1, 2, 3, 4];
     const palette = ["#005f6b", "#008c9e", "#00b4cc", "#00dffc"];

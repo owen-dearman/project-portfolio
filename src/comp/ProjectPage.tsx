@@ -1,5 +1,6 @@
 import { navOptions, projectOptions } from "../App";
 import { ElectricParticlesPage } from "../utils/Project Pages/ElectricParticlesPage";
+import { PrintArtPage } from "../utils/Project Pages/PrintArtPage";
 import { projectInformation } from "../utils/projects";
 
 interface ProjectPageProps {
@@ -7,17 +8,14 @@ interface ProjectPageProps {
   setNav: (arg0: navOptions) => void;
 }
 
-export function ProjectPage({
-  projectPage,
-  setNav,
-}: ProjectPageProps): JSX.Element {
+export function ProjectPage({ projectPage }: ProjectPageProps): JSX.Element {
   return (
     <>
-      <button onClick={() => setNav("projectOverview")}>
-        Back To Projects
-      </button>
       {projectPage === "Electric Particles" && (
         <ElectricParticlesPage data={projectInformation[0]} />
+      )}
+      {projectPage === "Print Art" && (
+        <PrintArtPage data={projectInformation[1]} />
       )}
     </>
   );
