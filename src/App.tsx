@@ -16,7 +16,10 @@ export type projectOptions =
   | "Single Worm Walker"
   | "Rotating Tumblers"
   | "3D Box With Spheres"
-  | "Trail Drawing";
+  | "Trail Drawing"
+  | "Battordle"
+  | "Baby Names"
+  | "TV Database";
 
 function App(): JSX.Element {
   const [nav, setNav] = useState<navOptions>("home");

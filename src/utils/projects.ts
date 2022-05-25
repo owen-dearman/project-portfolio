@@ -152,4 +152,58 @@ export const projectInformation: projectDataInterface[] = [
       "This sketch was created to solve the problem of overlapping elements when using collision detection. Igt involves a step-by-step algorithm to avoid such collisions. It can be developed further to attempt circle position regeneration when a collision is detected in a while loop, with a regulatory counter to avoid infinite loops.",
     instructions: "",
   },
+  {
+    id: 8,
+    title: "Battordle",
+    project: "Battordle",
+    artisticDesc:
+      "A two player 'pass-the-phone', live Wordle-inspired game where one player picks a 5 letter word and the other player attempts to correctly guess it.",
+    technicalDesc:
+      "A frontend application built in TypeScript with React based around the Wordle algorithm. This app contains unit testing to monitor the scoring algorithm and dictionaries to handle the marking of a guess. The grid is created using CSS flexboxes. This app also contains API checking of word inputs against a dictionary.",
+    tags: ["react", "TypeScript", "algorithms", "game", "front-end", "CSS"],
+    img: ["images/screenshots/battordle.jpg"],
+    url: [
+      "https://battordle.netlify.app",
+      "https://github.com/owen-dearman/wordle-2-player",
+    ],
+    reflection:
+      "This app was produced after a problem-solving session designed around the Wordle scoring algorithm. It is purely a front-end application and so has no persistence, but is suitable as a quick game between two word lovers.",
+    instructions: "",
+  },
+  {
+    id: 9,
+    title: "Baby Names App",
+    project: "Baby Names",
+    artisticDesc:
+      "A front-end application for users to produce a favourites list of baby names, search for names, filter by gender, and download their picked names.",
+    technicalDesc:
+      "A frontend application built in TypeScript with React based around useStates and filtering an array of objects (baby names). This is a very early project undertaken during the fulltime scholarship at Academy and contains no backend persistence or API conenction.",
+    tags: ["react", "TypeScript", "front-end", "CSS"],
+    img: ["images/screenshots/babyNames.jpg"],
+    url: [
+      "https://owend-baby-names.netlify.app/",
+      "https://github.com/owen-dearman/baby-names-V2",
+    ],
+    reflection:
+      "Whilst completing it, this project was difficult due to the novelty of the tools available. However, after much more training in React and TypeScript, I am much more comfortable with the languages, as well as useStates, useEffect, and other methods.",
+    instructions: "",
+  },
+  {
+    id: 10,
+    title: "TV Database",
+    project: "TV Database",
+    artisticDesc:
+      "A front-end React app utilising the TVMaze API to organise information regarding popular TV shows and series.",
+    technicalDesc:
+      "This front-end application is built in TypeScript with React and fetches information from an API and displays the series and show data in React components. Users can explore the content and add shows to a favourites list.",
+    tags: ["react", "TypeScript", "front-end", "CSS", "API"],
+    img: ["images/screenshots/tvdatabase.jpg"],
+    url: [
+      "https://tv-shows-info.netlify.app/",
+      "https://github.com/owen-dearman/react-tv-shows",
+    ],
+    reflection:
+      "This was a paired project of which I was a part, completed about halfway through the fulltime scholarship at Academy. I still go back to this project to recap on various aspects of React that I haven't needed in a while. This was also one of my first experiences at paired programming.",
+    instructions: "",
+  },
 ];

@@ -1,11 +1,14 @@
 import { useEffect } from "react";
 import { navOptions, projectOptions } from "../App";
+import { BabyNamesPage } from "../utils/Project Pages/BabyNamesPage";
+import { BattordlePage } from "../utils/Project Pages/BattordlePage";
 import { CirclePackingPage } from "../utils/Project Pages/CirclePackingPage";
 import { ElectricParticlesPage } from "../utils/Project Pages/ElectricParticlesPage";
 import { PrintArtPage } from "../utils/Project Pages/PrintArtPage";
 import { RotatingTumblersPage } from "../utils/Project Pages/RotatingTumblersPage";
 import { ThreeDCubePage } from "../utils/Project Pages/ThreeDCubePage";
 import { TrailDrawingPage } from "../utils/Project Pages/TrailDrawingPage";
+import { TVShowsPage } from "../utils/Project Pages/TVShowsPage";
 import { WormWalkerPage } from "../utils/Project Pages/WormWalkerPage";
 import { projectInformation } from "../utils/projects";
 
@@ -40,6 +43,15 @@ export function ProjectPage({ projectPage }: ProjectPageProps): JSX.Element {
       )}
       {projectPage === "Circle Packing" && (
         <CirclePackingPage data={projectInformation[6]} />
+      )}
+      {projectPage === "Battordle" && (
+        <BattordlePage data={projectInformation[7]} />
+      )}
+      {projectPage === "Baby Names" && (
+        <BabyNamesPage data={projectInformation[8]} />
+      )}
+      {projectPage === "TV Database" && (
+        <TVShowsPage data={projectInformation[9]} />
       )}
     </>
   );

@@ -13,7 +13,7 @@ export function SketchButtons(props: SketchButtonsProps): JSX.Element {
           <img
             className="overviewImage"
             src={x.img}
-            alt={`screenshot of Electric Particles 1`}
+            alt={`screenshot of ${x.img}`}
           />
           <button
             style={{ margin: "10px 0px" }}
