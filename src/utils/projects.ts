@@ -69,4 +69,66 @@ export const projectInformation: projectDataInterface[] = [
       "The hardest part of these sketches was to calculate the coordinates for each possible line orientation within the grid. After that, it was relatively simple to randomly select the orientation for the lines. In the animated sketch, it was a complex process to determine the origin for each line to rotate on, and to scale this for each grid cell. It was interesting to observe how drastically different the resulting sketches appear when the line coordinates are shifted a matter of pixels, as in sketches 4 and 5 below.",
     instructions: "Try 'z' to change colour palette",
   },
+  {
+    id: 3,
+    title: "Pseudo-Random Worm Walker",
+    project: "Single Worm Walker",
+    artisticDesc:
+      "A random walker that wanders around the canvas, changing colour depending on the sector it enters. The walker mimics some kind of radioactive worm, whom I've named Dave.",
+    technicalDesc:
+      "The walker's direction is determined in a pseudo-random manner using trigonometry to biased the walker in a forwards fashion which gives it a worm-like appearance. Object storage is used to maintain an array of walker positions to create the tail, which is periodically removed when the walker reaches a length of 60 segments. Worm colour is determined by the head position coordinates which trigger a change in the fill() function.",
+    tags: ["p5.js", "JavaScript", "algorithm", "data storage", "animation"],
+    img: ["images/screenshots/worm.jpg"],
+    url: ["https://openprocessing.org/sketch/1507693"],
+    reflection:
+      "This random walker was one of my first milestones in p5.js, and directly inpspired me to produce the Worm Olympics game. This involves 5 random walkers having a race along the canvas. I required some help with the mathematical algorithm for walker movement, but implemented it easily enough. Since this was created, I've worked more with vectors and am confident I'd be able to replicate this walker with p5.vectors. Were I to do this again, I'd also deconstruct the functionality more as opposed to running the majority in the draw() function.",
+    instructions: "Click the mouse to reposition the walker",
+  },
+  {
+    id: 4,
+    title: "Trail Drawing",
+    project: "Trail Drawing",
+    artisticDesc:
+      "A series of simple sketches that draw patterns and pictures depending on where you move the mouse. Experiment with symmetry, or create a rainbow trail in intricate curves.",
+    technicalDesc:
+      "These drawings are hard coded to either mirror the X and Y coordinates of the mouse position when drawing circles, or through incrementing the X coordinate to produce a rainbow of colours. In order to reduce payload and increase performance, there is a 'self-resetting' functionality where the trails begin to delete when 300 have been placed (prior to mirroring).",
+    tags: ["p5.js", "JavaScript", "animation", "artistic"],
+    img: [
+      "images/screenshots/trail1.jpg",
+      "images/screenshots/trail2.jpg",
+      "images/screenshots/trail3.jpg",
+    ],
+    url: [
+      "https://openprocessing.org/sketch/1580340",
+      "https://openprocessing.org/sketch/1580320",
+      "https://openprocessing.org/sketch/1569550",
+    ],
+    reflection:
+      "Some simple sketches that I've created based from helping out others with simplifying nested for-loops, and by taking inspiration from some sketches I've seen on Open Processing. These sketches were good practice at thinking 'how can I do this differently?' and testing out different methods for achieveing the same results.",
+    instructions: "Move the mouse around to create a symmetrical drawing",
+  },
+  {
+    id: 5,
+    title: "",
+    project: "",
+    artisticDesc: "",
+    technicalDesc: "",
+    tags: [],
+    img: [],
+    url: [],
+    reflection: "",
+    instructions: "",
+  },
+  {
+    id: 6,
+    title: "",
+    project: "",
+    artisticDesc: "",
+    technicalDesc: "",
+    tags: [],
+    img: [],
+    url: [],
+    reflection: "",
+    instructions: "",
+  },
 ];

@@ -1,19 +1,17 @@
 import { imageLinkConversion } from "../imageLinkToOb";
 import { projectDataInterface } from "../projects";
 import { SketchButtons } from "../sketchButtons";
-import ElectricParticles from "../sketches/electricParticles";
+import SymmetryX4 from "../sketches/symmetryX4";
 
-interface ElectricParticlesPageProps {
+interface TrailDrawingProps {
   data: projectDataInterface;
 }
 
-export function ElectricParticlesPage({
-  data,
-}: ElectricParticlesPageProps): JSX.Element {
+export function TrailDrawingPage({ data }: TrailDrawingProps): JSX.Element {
   return (
     <section className="projectContainer">
       <h1 className="projectTitle">{data.title}</h1>
-      <ElectricParticles />
+      <SymmetryX4 />
       <p>Instructions: {data.instructions}</p>
       <div style={{ width: "70%" }}>
         <p>{data.artisticDesc}</p>

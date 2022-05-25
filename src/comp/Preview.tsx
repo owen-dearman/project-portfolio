@@ -53,7 +53,7 @@ export function Preview(props: PreviewProps): JSX.Element {
     {
       id: 11,
       desc: "Four way symmetrical drawing. Move the mouse around the canvas to draw a picture.",
-      project: "4 Way Symmetry",
+      project: "Trail Drawing",
     },
     {
       id: 12,
@@ -63,7 +63,7 @@ export function Preview(props: PreviewProps): JSX.Element {
     {
       id: 13,
       desc: "Draw a rainbow picture. Press 'd' and move the mouse around the canvas.",
-      project: "Rainbow Trail",
+      project: "Trail Drawing",
     },
     {
       id: 14,

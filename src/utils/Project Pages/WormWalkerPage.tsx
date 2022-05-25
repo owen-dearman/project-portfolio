@@ -1,19 +1,17 @@
 import { imageLinkConversion } from "../imageLinkToOb";
 import { projectDataInterface } from "../projects";
 import { SketchButtons } from "../sketchButtons";
-import ElectricParticles from "../sketches/electricParticles";
+import DaveTheWorm from "../sketches/daveTheWorm";
 
-interface ElectricParticlesPageProps {
+interface WormWalkerPageProps {
   data: projectDataInterface;
 }
 
-export function ElectricParticlesPage({
-  data,
-}: ElectricParticlesPageProps): JSX.Element {
+export function WormWalkerPage({ data }: WormWalkerPageProps): JSX.Element {
   return (
     <section className="projectContainer">
       <h1 className="projectTitle">{data.title}</h1>
-      <ElectricParticles />
+      <DaveTheWorm />
       <p>Instructions: {data.instructions}</p>
       <div style={{ width: "70%" }}>
         <p>{data.artisticDesc}</p>

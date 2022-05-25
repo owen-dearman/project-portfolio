@@ -13,9 +13,11 @@ export function PrintArtPage({ data }: PrintArtPageProps): JSX.Element {
       <h1 className="projectTitle">{data.title}</h1>
       <PrintArtAnimate />
       <p>Instructions: {data.instructions}</p>
-      <p>{data.artisticDesc}</p>
-      <p>{data.technicalDesc}</p>
-      <p>{data.reflection}</p>
+      <div style={{ width: "70%" }}>
+        <p>{data.artisticDesc}</p>
+        <p>{data.technicalDesc}</p>
+        <p>{data.reflection}</p>
+      </div>
       <SketchButtons data={imageLinkConversion(data.img, data.url)} />
     </section>
   );

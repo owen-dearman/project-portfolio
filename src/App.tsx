@@ -15,9 +15,8 @@ export type projectOptions =
   | "Circle Packing"
   | "Single Worm Walker"
   | "Rotating Tumblers"
-  | "4 Way Symmetry"
   | "3D Box With Spheres"
-  | "Rainbow Trail";
+  | "Trail Drawing";
 
 function App(): JSX.Element {
   const [nav, setNav] = useState<navOptions>("home");
