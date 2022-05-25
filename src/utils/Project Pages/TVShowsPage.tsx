@@ -12,11 +12,7 @@ export function TVShowsPage({ data }: TVShowsPageProps): JSX.Element {
   return (
     <section className="projectContainer">
       <h1 className="projectTitle">{data.title}</h1>
-      <img
-        style={{ width: "60%" }}
-        alt={`image of ${data.title}`}
-        src={data.img[0]}
-      />
+      <img style={{ width: "60%" }} alt={`${data.title}`} src={data.img[0]} />
       <div style={{ width: "70%" }}>
         <p>{data.artisticDesc}</p>
         <p>{data.technicalDesc}</p>

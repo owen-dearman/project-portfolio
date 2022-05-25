@@ -5,6 +5,7 @@ export function Footer(): JSX.Element {
         The source code for this project can be found{" "}
         <a
           target="_blank"
+          rel="noreferrer"
           href="https://github.com/owen-dearman/project-portfolio"
         >
           here
@@ -13,7 +14,11 @@ export function Footer(): JSX.Element {
       </p>
       <p>
         With thanks to Jacob Cutts for his implementation of p5.js in React (
-        <a target="_blank" href="https://github.com/JacobCutts13/p5-react">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://github.com/JacobCutts13/p5-react"
+        >
           here
         </a>
         ).{" "}
