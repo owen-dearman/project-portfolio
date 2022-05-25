@@ -9,6 +9,7 @@ import { RotatingTumblersPage } from "../utils/Project Pages/RotatingTumblersPag
 import { ThreeDCubePage } from "../utils/Project Pages/ThreeDCubePage";
 import { TrailDrawingPage } from "../utils/Project Pages/TrailDrawingPage";
 import { TVShowsPage } from "../utils/Project Pages/TVShowsPage";
+import { WormOlympicsPage } from "../utils/Project Pages/WormOlympicsPage";
 import { WormWalkerPage } from "../utils/Project Pages/WormWalkerPage";
 import { projectInformation } from "../utils/projects";
 
@@ -52,6 +53,9 @@ export function ProjectPage({ projectPage }: ProjectPageProps): JSX.Element {
       )}
       {projectPage === "TV Database" && (
         <TVShowsPage data={projectInformation[9]} />
+      )}
+      {projectPage === "Worm Olympics" && (
+        <WormOlympicsPage data={projectInformation[10]} />
       )}
     </>
   );

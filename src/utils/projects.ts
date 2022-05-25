@@ -206,4 +206,25 @@ export const projectInformation: projectDataInterface[] = [
       "This was a paired project of which I was a part, completed about halfway through the fulltime scholarship at Academy. I still go back to this project to recap on various aspects of React that I haven't needed in a while. This was also one of my first experiences at paired programming.",
     instructions: "",
   },
+  {
+    id: 11,
+    title: "Worm Olympics",
+    project: "Worm Olympics",
+    artisticDesc:
+      "A series of p5.js sketches creating a remote multiplayer game revolving around betting on the worm you think will win a sprint race.",
+    technicalDesc:
+      "This sketch uses socket.io to talk between sketches relaying live race information and the voting information. It involves some retro graphics and object storage like the single random walker sketch.",
+    tags: ["p5.js", "JavaScript", "socket.io", "animation", "game"],
+    img: [
+      "images/screenshots/wormOlympics.jpg",
+      "images/screenshots/wormOlympicsVoting.jpg",
+    ],
+    url: [
+      "https://openprocessing.org/sketch/1509211",
+      "https://openprocessing.org/sketch/1530348",
+    ],
+    reflection:
+      "This was the biggest project I'd undertaken to this point and I'm really pleased with how it turned out. There are a lot of components which had to be considered and it was really beneficial to be using an editor other than VS Code to get a handle on the importance of organisation when programming.",
+    instructions: "",
+  },
 ];

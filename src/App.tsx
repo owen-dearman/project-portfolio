@@ -19,7 +19,8 @@ export type projectOptions =
   | "Trail Drawing"
   | "Battordle"
   | "Baby Names"
-  | "TV Database";
+  | "TV Database"
+  | "Worm Olympics";
 
 function App(): JSX.Element {
   const [nav, setNav] = useState<navOptions>("home");
