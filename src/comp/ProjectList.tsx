@@ -13,6 +13,9 @@ export function ProjectList({
   setProjectPage,
   setNav,
 }: ProjectListProps): JSX.Element {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [searchInput, setSearchInput] = useState<string>("");
   const [projects, setProjects] = useState<projectDataInterface[]>([]);
 

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { imageLinkConversion } from "../imageLinkToOb";
 import { projectDataInterface } from "../projects";
 import { SketchButtons } from "../sketchButtons";
@@ -8,6 +9,9 @@ interface WormWalkerPageProps {
 }
 
 export function WormWalkerPage({ data }: WormWalkerPageProps): JSX.Element {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="projectContainer">
       <h1 className="projectTitle">{data.title}</h1>

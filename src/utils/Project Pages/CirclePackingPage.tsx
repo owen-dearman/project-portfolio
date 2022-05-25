@@ -1,21 +1,19 @@
-import { projectDataInterface } from "../projects";
 import { imageLinkConversion } from "../imageLinkToOb";
-import PrintArtAnimate from "../sketches/printArtAnimate";
+import { projectDataInterface } from "../projects";
 import { SketchButtons } from "../sketchButtons";
-import { useEffect } from "react";
+import CirclePacking from "../sketches/circlePacking";
 
-interface PrintArtPageProps {
+interface CirclePackingPageProps {
   data: projectDataInterface;
 }
 
-export function PrintArtPage({ data }: PrintArtPageProps): JSX.Element {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+export function CirclePackingPage({
+  data,
+}: CirclePackingPageProps): JSX.Element {
   return (
     <section className="projectContainer">
       <h1 className="projectTitle">{data.title}</h1>
-      <PrintArtAnimate />
+      <CirclePacking />
       <p>Instructions: {data.instructions}</p>
       <div style={{ width: "70%" }}>
         <p>{data.artisticDesc}</p>

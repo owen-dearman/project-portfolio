@@ -1,21 +1,21 @@
-import { projectDataInterface } from "../projects";
-import { imageLinkConversion } from "../imageLinkToOb";
-import PrintArtAnimate from "../sketches/printArtAnimate";
-import { SketchButtons } from "../sketchButtons";
 import { useEffect } from "react";
+import { imageLinkConversion } from "../imageLinkToOb";
+import { projectDataInterface } from "../projects";
+import { SketchButtons } from "../sketchButtons";
+import ThreeDCube from "../sketches/threeDCube";
 
-interface PrintArtPageProps {
+interface ThreeDCubePageProps {
   data: projectDataInterface;
 }
 
-export function PrintArtPage({ data }: PrintArtPageProps): JSX.Element {
+export function ThreeDCubePage({ data }: ThreeDCubePageProps): JSX.Element {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <section className="projectContainer">
       <h1 className="projectTitle">{data.title}</h1>
-      <PrintArtAnimate />
+      <ThreeDCube />
       <p>Instructions: {data.instructions}</p>
       <div style={{ width: "70%" }}>
         <p>{data.artisticDesc}</p>

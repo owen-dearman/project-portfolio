@@ -92,7 +92,7 @@ export const projectInformation: projectDataInterface[] = [
       "A series of simple sketches that draw patterns and pictures depending on where you move the mouse. Experiment with symmetry, or create a rainbow trail in intricate curves.",
     technicalDesc:
       "These drawings are hard coded to either mirror the X and Y coordinates of the mouse position when drawing circles, or through incrementing the X coordinate to produce a rainbow of colours. In order to reduce payload and increase performance, there is a 'self-resetting' functionality where the trails begin to delete when 300 have been placed (prior to mirroring).",
-    tags: ["p5.js", "JavaScript", "animation", "artistic"],
+    tags: ["p5.js", "JavaScript", "animation", "artistic", "2D"],
     img: [
       "images/screenshots/trail1.jpg",
       "images/screenshots/trail2.jpg",
@@ -109,26 +109,47 @@ export const projectInformation: projectDataInterface[] = [
   },
   {
     id: 5,
-    title: "",
-    project: "",
-    artisticDesc: "",
-    technicalDesc: "",
-    tags: [],
-    img: [],
-    url: [],
-    reflection: "",
-    instructions: "",
+    title: "3D Cube Simulation",
+    project: "3D Box With Spheres",
+    artisticDesc:
+      "A line-drawing style sketch with a rotating cube filled with spheres that bounce around this inside of the cube. ",
+    technicalDesc:
+      "The 3D cube rotates on X, Y, and Z axis around the camera position with spheres that move around the canvas, deflecting when colliding with each other or the walls of the cube. The user has the ability to zoom in and out, as well as pan around the structure. Sphere detailed are contained within an object, with their position and movement determined by vectors.",
+    tags: ["p5.js", "3D", "animation", "collision detection"],
+    img: ["images/screenshots/3dspheres.jpg"],
+    url: ["https://openprocessing.org/sketch/1521008"],
+    reflection:
+      "This sketch is visually interesting, if not nausea inducing, and was created as practice in collision detection and working with 3D models in p5.js.",
+    instructions: "Press '1' to remove all spheres, '2' to add more",
   },
   {
     id: 6,
-    title: "",
-    project: "",
-    artisticDesc: "",
-    technicalDesc: "",
-    tags: [],
-    img: [],
-    url: [],
-    reflection: "",
+    title: "Rotating Tumblers",
+    project: "Rotating Tumblers",
+    artisticDesc:
+      "A selection of scaled spinning arcs with their own rotation around the centre, coloured randomly from a palette.",
+    technicalDesc:
+      "Systematically spaced arcs which rotate clockwise or counter-clockwise, depending on a random selection decided at arc creation, with a random speed. Colour is assigned randomly at this stage from a palette.",
+    tags: ["p5.js", "animation", "2D"],
+    img: ["images/screenshots/rotation.jpg"],
+    url: ["https://openprocessing.org/sketch/1506703"],
+    reflection:
+      "Rotation is one of the harder concepts in p5.js and so this sketch acts as a baseline for working with rotation. Having each tumbler have it's own rotation is a step up on having all tumblers have the same rotation, which gives another dimension to the sketch.",
+    instructions: "Press spacebar to reset",
+  },
+  {
+    id: 7,
+    title: "Circle Packing",
+    project: "Circle Packing",
+    artisticDesc:
+      "Randomly generated circles packed into a canvas, plugged into an algorithm that means they cannot overlap with any other circles.",
+    technicalDesc:
+      "The distance between the edges of each new circle is calculated against the position of every circle that has previously been generated. If a collision is detected, then the circle is not drawn onto the sketch. Circle diamater is pseudo-randomly generated based on a gaussian distribution. The sketch is automatically regenerated every second.",
+    tags: ["p5.js", "2D", "algorithms"],
+    img: ["images/screenshots/circlePacking.jpg"],
+    url: ["https://openprocessing.org/sketch/1544664"],
+    reflection:
+      "This sketch was created to solve the problem of overlapping elements when using collision detection. Igt involves a step-by-step algorithm to avoid such collisions. It can be developed further to attempt circle position regeneration when a collision is detected in a while loop, with a regulatory counter to avoid infinite loops.",
     instructions: "",
   },
 ];
