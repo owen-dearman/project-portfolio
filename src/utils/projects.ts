@@ -28,6 +28,7 @@ export const projectInformation: projectDataInterface[] = [
       "vectors",
       "JavaScript",
       "particle system",
+      "animation",
     ],
     img: ["images/screenshots/EP1.jpg", "images/screenshots/EP2.jpg"],
     url: [
@@ -115,7 +116,7 @@ export const projectInformation: projectDataInterface[] = [
       "A line-drawing style sketch with a rotating cube filled with spheres that bounce around this inside of the cube. ",
     technicalDesc:
       "The 3D cube rotates on X, Y, and Z axis around the camera position with spheres that move around the canvas, deflecting when colliding with each other or the walls of the cube. The user has the ability to zoom in and out, as well as pan around the structure. Sphere detailed are contained within an object, with their position and movement determined by vectors.",
-    tags: ["p5.js", "3D", "animation", "collision detection"],
+    tags: ["p5.js", "3D", "animation", "collision detection", "JavaScript"],
     img: ["images/screenshots/3dspheres.jpg"],
     url: ["https://openprocessing.org/sketch/1521008"],
     reflection:
@@ -130,7 +131,7 @@ export const projectInformation: projectDataInterface[] = [
       "A selection of scaled spinning arcs with their own rotation around the centre, coloured randomly from a palette.",
     technicalDesc:
       "Systematically spaced arcs which rotate clockwise or counter-clockwise, depending on a random selection decided at arc creation, with a random speed. Colour is assigned randomly at this stage from a palette.",
-    tags: ["p5.js", "animation", "2D"],
+    tags: ["p5.js", "animation", "2D", "JavaScript"],
     img: ["images/screenshots/rotation.jpg"],
     url: ["https://openprocessing.org/sketch/1506703"],
     reflection:
@@ -145,7 +146,7 @@ export const projectInformation: projectDataInterface[] = [
       "Randomly generated circles packed into a canvas, plugged into an algorithm that means they cannot overlap with any other circles.",
     technicalDesc:
       "The distance between the edges of each new circle is calculated against the position of every circle that has previously been generated. If a collision is detected, then the circle is not drawn onto the sketch. Circle diamater is pseudo-randomly generated based on a gaussian distribution. The sketch is automatically regenerated every second.",
-    tags: ["p5.js", "2D", "algorithms"],
+    tags: ["p5.js", "2D", "algorithms", "collision detection", "JavaScript"],
     img: ["images/screenshots/circlePacking.jpg"],
     url: ["https://openprocessing.org/sketch/1544664"],
     reflection:
@@ -160,7 +161,15 @@ export const projectInformation: projectDataInterface[] = [
       "A two player 'pass-the-phone', live Wordle-inspired game where one player picks a 5 letter word and the other player attempts to correctly guess it.",
     technicalDesc:
       "A frontend application built in TypeScript with React based around the Wordle algorithm. This app contains unit testing to monitor the scoring algorithm and dictionaries to handle the marking of a guess. The grid is created using CSS flexboxes. This app also contains API checking of word inputs against a dictionary.",
-    tags: ["react", "TypeScript", "algorithms", "game", "front-end", "CSS"],
+    tags: [
+      "react",
+      "TypeScript",
+      "algorithms",
+      "game",
+      "front-end",
+      "CSS",
+      "frontend",
+    ],
     img: ["images/screenshots/battordle.jpg"],
     url: [
       "https://battordle.netlify.app",
@@ -178,7 +187,7 @@ export const projectInformation: projectDataInterface[] = [
       "A front-end application for users to produce a favourites list of baby names, search for names, filter by gender, and download their picked names.",
     technicalDesc:
       "A frontend application built in TypeScript with React based around useStates and filtering an array of objects (baby names). This is a very early project undertaken during the fulltime scholarship at Academy and contains no backend persistence or API conenction.",
-    tags: ["react", "TypeScript", "front-end", "CSS"],
+    tags: ["react", "TypeScript", "front-end", "CSS", "frontend"],
     img: ["images/screenshots/babyNames.jpg"],
     url: [
       "https://owend-baby-names.netlify.app/",
@@ -196,7 +205,7 @@ export const projectInformation: projectDataInterface[] = [
       "A front-end React app utilising the TVMaze API to organise information regarding popular TV shows and series.",
     technicalDesc:
       "This front-end application is built in TypeScript with React and fetches information from an API and displays the series and show data in React components. Users can explore the content and add shows to a favourites list.",
-    tags: ["react", "TypeScript", "front-end", "CSS", "API"],
+    tags: ["react", "TypeScript", "frontend", "CSS", "API"],
     img: ["images/screenshots/tvdatabase.jpg"],
     url: [
       "https://tv-shows-info.netlify.app/",
@@ -214,7 +223,16 @@ export const projectInformation: projectDataInterface[] = [
       "A series of p5.js sketches creating a remote multiplayer game revolving around betting on the worm you think will win a sprint race.",
     technicalDesc:
       "This sketch uses socket.io to talk between sketches relaying live race information and the voting information. It involves some retro graphics and object storage like the single random walker sketch.",
-    tags: ["p5.js", "JavaScript", "socket.io", "animation", "game"],
+    tags: [
+      "p5.js",
+      "JavaScript",
+      "socket.io",
+      "animation",
+      "game",
+      "collision detection",
+      "2D",
+      "algorithm",
+    ],
     img: [
       "images/screenshots/wormOlympics.jpg",
       "images/screenshots/wormOlympicsVoting.jpg",
@@ -225,6 +243,160 @@ export const projectInformation: projectDataInterface[] = [
     ],
     reflection:
       "This was the biggest project I'd undertaken to this point and I'm really pleased with how it turned out. There are a lot of components which had to be considered and it was really beneficial to be using an editor other than VS Code to get a handle on the importance of organisation when programming.",
+    instructions: "",
+  },
+  {
+    id: 12,
+    title: "Fireworks Display",
+    project: "Fireworks",
+    artisticDesc:
+      "A series of animations based on the physics and aesthetics of a night time fireworks display. This project contains three animations: an automated display set infront of a large moon; a display where fireworks are triggered by mouse click and travel to the mouse position before exploding; and an animation where embers are created and fall to the ground based on the user dragging the mouse.",
+    technicalDesc:
+      "A firework is constructed of a line drawn between its current position vector and its previous position vector. The firework moves when a velocity vector is applied to the position vector, with a small smount of random acceleration. The firework is created with a fuse, which decreases by 1 every frame until 0, when the firework 'explodes.' The explosion consists of the creation of a number of particles, drawn the same way as the fireworks, but with added aesthetic styling. These accelerate away from the point of explosion in 360 degrees, with a gravity acting upon them. The embers have a random age and once this is reached, they are removed from the object storage which allows the sketch to continue without excess unused data being stored.",
+    tags: [
+      "p5.js",
+      "animation",
+      "2D",
+      "vectors",
+      "algorithm",
+      "physics",
+      "JavaScript",
+      "particle system",
+    ],
+    img: [
+      "images/screenshots/fireworks1.jpg",
+      "images/screenshots/fireworks2.jpg",
+      "images/screenshots/embers.jpg",
+    ],
+    url: [
+      "https://openprocessing.org/sketch/1558632",
+      "https://openprocessing.org/sketch/1558427",
+      "https://openprocessing.org/sketch/1555314",
+    ],
+    reflection:
+      "When I started creative coding using p5.js, my goal was to create a fireworks display. The majority of my sketches, other than learning the basics of p5.js have been building to this sketch. I'm extremely proud of how it has turned out, including some very realistic physics with the wobbling fireworks and explosion particles that waft downwards. This series of sketches taught me the most about vectors, including the different methods to use on them in the p5.js library.",
+    instructions: "Press 't' to change firework style.",
+  },
+  {
+    id: 13,
+    title: "Starfield",
+    project: "Starfield",
+    artisticDesc:
+      "A series of sketches simulating the POV of moving through space at hyperspeed. The appearance of stars flying by as the user traverses space is a simple yet effective animation to produce, with a lot of extra functionality that can be added. There are two sketches in this project: one in 2D and the other in 3D.",
+    technicalDesc:
+      "These particle systems involve the generating of lines (2D) and boxes (3D) at one side of the canvas before incrementally moving them. When they are off screen or behind the camera, then they are deleted and a new particle is generated at the starting point. This allows for infinite visual effects of movement with a generally small number of particles. Other, stationary, shapes are drawn 'in the distance' as stars to enhance the visual effect of a space system. The appearance of depth is created through particle size being dependent on speed, so that closer particles appear to be moving slower.",
+    tags: [
+      "2D",
+      "3D",
+      "p5.js",
+      "animation",
+      "particle system",
+      "vectors",
+      "JavaScript",
+    ],
+    img: [
+      "images/screenshots/starfield3D.jpg",
+      "images/screenshots/starfield2D.jpg",
+    ],
+    url: [
+      "https://openprocessing.org/sketch/1551984",
+      "https://openprocessing.org/sketch/1548008",
+    ],
+    reflection:
+      "I came to these sketches quite late on in my p5.js journey. The were recommended as a starting project but I went the way of random walkers and 3D before getting here. As such, I was pleasantly surpised at how easy I found them and the ease at which I could develop really effective sketches. Even so, they provide a clear example of particle systems and were fun to make.",
+    instructions: "Use 'w' to speed up and 's' to slow down",
+  },
+  {
+    id: 14,
+    title: "Infinite City Driver",
+    project: "Infinite City Driver",
+    artisticDesc:
+      "An animation of a cartoon style car driving along an infinitely generating road amongst city skyscrapers. The aesthetics of the car are designed to relate to the Transformer 'Bumblebee'.",
+    technicalDesc:
+      "Built using nothing by p5.js, this animation involves many components to build: the car, the buildings, road, and plane. Much like the starfield, the elements are only drawn as long as they are in frame. After that, they are deleted. The plane is an optical illusion in that it is not actually moving under the car, nor is the car moving over it. The window width is mapped to the width of the road in order to normalise the steering for the user.",
+    tags: ["3D", "animation", "p5.js", "JavaScript"],
+    img: ["images/screenshots/citydriver.jpg"],
+    url: ["https://openprocessing.org/sketch/1536247"],
+    reflection:
+      "This was a fun project to undertake and took some mental gymnastics to work out how all the different components fit together to produce an effective sketch. One of the best parts was using relative translation in order to place each component of the car. This means that each component is placed relative to the last one, as opposed to being place relative to the origin.",
+    instructions: "Move the mouse along the X axis to steer the car.",
+  },
+  {
+    id: 15,
+    title: "Planet Orbits",
+    project: "Planet Orbits",
+    artisticDesc:
+      "A simulation of a solar system with a selection of textured planets and moons orbiting a sun. This sketch was build using p5.js with textures from www.solarsystemscope.com/textures. ",
+    technicalDesc:
+      "This project concerns several types of rotation. Firstly, each planet rotates on the Y axis around the sun, with varying speed and orbit size but all counter clockwise. Secondly, all planets rotate on the Y axis around their own position, much like the Earth does every day. Likewise, a point light from the sun is created to simulate day and night in this universe. Thirdly, the moon and rings also orbit around their respective planet. The moon rotates on the Y axis, and the ring rotates on the X and Z axes.",
+    tags: ["p5.js", "3D", "physics"],
+    img: ["images/screenshots/planetOrbits.jpg"],
+    url: ["https://openprocessing.org/sketch/1581050"],
+    reflection:
+      "Despite apparent major differences between this sketch and Rotating Tumblers, there are a lot of shared aspects between the two sketches. For example, the functionality of rotating an element around the origin is replicated here as the planets orbit the sun which has been drawn on (0,0,0). This was an interesting sketch to build and is all the more impressive for the high quality textures to make the worlds more lifelike.",
+    instructions: "",
+  },
+  {
+    id: 16,
+    title: "Object Manipulation",
+    project: "Object Manipulation",
+    artisticDesc:
+      "This sketch began life as a stationary cluster of boxes, floating in the nether. In this project, functionality has been added that allows the boxes to move, rotate, grow and shrink, and produce interesting shapes such as a solitary cube, or a sphere.",
+    technicalDesc:
+      "The aim of this project was to practice manipulating object storage.The lerp() method is used to transition a box from one orientation or position to another, with the user pressing various keys to update the relevant target positions. There are a number of unique patterns that the user can create using a selection of commands.",
+    tags: ["p5.js", "3D"],
+    img: ["images/screenshots/objectManipulation.jpg"],
+    url: ["https://openprocessing.org/sketch/1520468"],
+    reflection:
+      "This sketch was a useful introduction to vectors and some of the methods that can be conducted upon them. Furthermore, it was not a particularly complicated design like some of the other 3D projects here, and so it allowed me to focus on the algorithms and methods rather than visuals.",
+    instructions: "",
+  },
+  {
+    id: 17,
+    title: "Posenet Glasses",
+    project: "Posenet Glasses",
+    artisticDesc: "",
+    technicalDesc: "",
+    tags: ["p5.js", "posenet", "AI", "API"],
+    img: ["images/screenshots/posenet.jpg"],
+    url: ["https://openprocessing.org/sketch/1569837"],
+    reflection: "",
+    instructions: "",
+  },
+  {
+    id: 18,
+    title: "Pastebin App",
+    project: "Pastebin App",
+    artisticDesc: "",
+    technicalDesc: "",
+    tags: ["react", "fullstack", "TypeScript", "Express", "SQL"],
+    img: ["images/screenshots/pastebin.jpg"],
+    url: ["https://pastebins-frontend.netlify.app/"],
+    reflection: "",
+    instructions: "",
+  },
+  {
+    id: 19,
+    title: "Dog Voting App",
+    project: "Dog Voting App",
+    artisticDesc: "",
+    technicalDesc: "",
+    tags: ["react", "fullstack", "TypeScript", "Express", "SQL", "API"],
+    img: ["images/screenshots/dogVoting.jpg"],
+    url: ["https://saj-zeri-patelman-dogvotes.netlify.app/"],
+    reflection: "",
+    instructions: "",
+  },
+  {
+    id: 20,
+    title: "Favourite Places",
+    project: "Favourite Places",
+    artisticDesc: "",
+    technicalDesc: "",
+    tags: ["react", "frontend", "TypeScript"],
+    img: ["images/screenshots/favPlaces.jpg"],
+    url: ["https://owen-fav-places.netlify.app/"],
+    reflection: "",
     instructions: "",
   },
 ];

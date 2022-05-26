@@ -20,7 +20,16 @@ export type projectOptions =
   | "Battordle"
   | "Baby Names"
   | "TV Database"
-  | "Worm Olympics";
+  | "Worm Olympics"
+  | "Fireworks"
+  | "Starfield"
+  | "Infinite City Driver"
+  | "Planet Orbits"
+  | "Object Manipulation"
+  | "Posenet Glasses"
+  | "Pastebin App"
+  | "Dog Voting App"
+  | "Favourite Places";
 
 function App(): JSX.Element {
   const [nav, setNav] = useState<navOptions>("home");

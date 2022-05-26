@@ -71,6 +71,7 @@ button:hover{
 
 hr{
     border-color: black;
+    margin-bottom: 20px;
 }
 
 .projectOverviewContainer{
@@ -85,7 +86,7 @@ hr{
 
 .overviewImage {
     justify-content: center;
-    width: 50%
+    width: 60%
 }
 
 .tag{

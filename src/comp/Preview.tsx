@@ -14,6 +14,10 @@ import ThreeDCube from "../utils/sketches/threeDCube";
 import ElectricParticles from "../utils/sketches/electricParticles";
 import { useState } from "react";
 import { navOptions, projectOptions } from "../App";
+import FireWorks from "../utils/sketches/FireWorks";
+import Starfield from "../utils/sketches/Starfield";
+import InfiniteCity from "../utils/sketches/InfiniteCity";
+import Starfield3D from "../utils/sketches/Starfield3D";
 
 type sketchTitleType = { id: number; desc: string; project: projectOptions };
 
@@ -70,6 +74,26 @@ export function Preview(props: PreviewProps): JSX.Element {
       desc: "Electric particles that connect when close. Move the mouse to join to particles.",
       project: "Electric Particles",
     },
+    {
+      id: 15,
+      desc: "Automated fireworks display. Press 't' to change the firework style. ",
+      project: "Fireworks",
+    },
+    {
+      id: 16,
+      desc: "Press 'w' to speed up and 's' to slow down.",
+      project: "Starfield",
+    },
+    {
+      id: 17,
+      desc: "Press 'w' to speed up and 's' to slow down.",
+      project: "Starfield",
+    },
+    {
+      id: 18,
+      desc: "Mouse the mouse left and right to steer",
+      project: "Infinite City Driver",
+    },
   ];
 
   const sketch = sketchTitles[Math.floor(Math.random() * sketchTitles.length)];
@@ -84,14 +108,14 @@ export function Preview(props: PreviewProps): JSX.Element {
           )
         }
       >
-        Show Me A New One!
+        Show Me A Random Project!
       </button>
       <button
         onClick={() =>
           window.alert(`${currentSketch.project}: ${currentSketch.desc}`)
         }
       >
-        What Is This One?
+        What Is This Project?
       </button>
       <button
         onClick={() => {
@@ -99,7 +123,7 @@ export function Preview(props: PreviewProps): JSX.Element {
           props.setProjectPage(currentSketch.project);
         }}
       >
-        Take Me To This One!
+        Take Me To This Project!
       </button>
       <hr></hr>
       {currentSketch.id === 1 && <PrintArtDiagonalSquare />}
@@ -116,6 +140,10 @@ export function Preview(props: PreviewProps): JSX.Element {
       {currentSketch.id === 12 && <ThreeDCube />}
       {currentSketch.id === 13 && <RainbowTrail />}
       {currentSketch.id === 14 && <ElectricParticles />}
+      {currentSketch.id === 15 && <FireWorks />}
+      {currentSketch.id === 16 && <Starfield />}
+      {currentSketch.id === 17 && <Starfield3D />}
+      {currentSketch.id === 18 && <InfiniteCity />}
     </div>
   );
 }

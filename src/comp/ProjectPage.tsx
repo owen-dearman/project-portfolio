@@ -4,8 +4,13 @@ import { BabyNamesPage } from "../utils/Project Pages/BabyNamesPage";
 import { BattordlePage } from "../utils/Project Pages/BattordlePage";
 import { CirclePackingPage } from "../utils/Project Pages/CirclePackingPage";
 import { ElectricParticlesPage } from "../utils/Project Pages/ElectricParticlesPage";
+import { FireworksPage } from "../utils/Project Pages/FireworksPage";
+import { InfiniteCityPage } from "../utils/Project Pages/InfiniteCityPage";
+import { ObjectManipulationPage } from "../utils/Project Pages/ObjectManipulationPage";
+import { PlanetOrbitsPage } from "../utils/Project Pages/PlanetOrbitsPage";
 import { PrintArtPage } from "../utils/Project Pages/PrintArtPage";
 import { RotatingTumblersPage } from "../utils/Project Pages/RotatingTumblersPage";
+import { StarfieldPage } from "../utils/Project Pages/StarfieldPage";
 import { ThreeDCubePage } from "../utils/Project Pages/ThreeDCubePage";
 import { TrailDrawingPage } from "../utils/Project Pages/TrailDrawingPage";
 import { TVShowsPage } from "../utils/Project Pages/TVShowsPage";
@@ -56,6 +61,21 @@ export function ProjectPage({ projectPage }: ProjectPageProps): JSX.Element {
       )}
       {projectPage === "Worm Olympics" && (
         <WormOlympicsPage data={projectInformation[10]} />
+      )}
+      {projectPage === "Fireworks" && (
+        <FireworksPage data={projectInformation[11]} />
+      )}
+      {projectPage === "Starfield" && (
+        <StarfieldPage data={projectInformation[12]} />
+      )}
+      {projectPage === "Infinite City Driver" && (
+        <InfiniteCityPage data={projectInformation[13]} />
+      )}
+      {projectPage === "Planet Orbits" && (
+        <PlanetOrbitsPage data={projectInformation[14]} />
+      )}
+      {projectPage === "Object Manipulation" && (
+        <ObjectManipulationPage data={projectInformation[15]} />
       )}
     </>
   );

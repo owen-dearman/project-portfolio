@@ -4,6 +4,8 @@ import { filterProjects } from "../utils/filterProjects";
 import { projectDataInterface, projectInformation } from "../utils/projects";
 import { ProjectOverview } from "./ProjectOverview";
 
+type SortType = "R" | "A";
+
 interface ProjectListProps {
   setProjectPage: (arg0: projectOptions) => void;
   setNav: (arg0: navOptions) => void;
@@ -18,18 +20,17 @@ export function ProjectList({
   }, []);
   const [searchInput, setSearchInput] = useState<string>("");
   const [projects, setProjects] = useState<projectDataInterface[]>([]);
+  const [Toggle, setToggle] = useState<boolean>(false);
 
   useEffect(() => {
     function fetchProjectData() {
       const data = projectInformation;
-      setProjects(data);
+      setProjects(data.sort((a, b) => a.id - b.id));
     }
     fetchProjectData();
   });
 
-  const projectList = projects
-    .filter((p) => filterProjects(p, searchInput))
-    .sort((a, b) => a.title.localeCompare(b.title));
+  const projectList = projects.filter((p) => filterProjects(p, searchInput));
 
   const projectOverviews = projectList.map((p) => (
     <ProjectOverview
@@ -39,6 +40,15 @@ export function ProjectList({
       setNav={setNav}
     />
   ));
+
+  function handleSort(type: SortType) {
+    if (type === "R") {
+      setProjects(projects.sort((a, b) => a.id - b.id));
+    } else {
+      setProjects(projects.sort((a, b) => a.title.localeCompare(b.title)));
+    }
+    setToggle(!Toggle);
+  }
 
   return (
     <section>
@@ -52,6 +62,10 @@ export function ProjectList({
           onChange={(e) => setSearchInput(e.target.value)}
         />
         <button onClick={() => setSearchInput("")}>Clear Search</button>
+      </div>
+      <div style={{ textAlign: "center" }}>
+        <button onClick={() => handleSort("R")}> Sort Relevance</button>
+        <button onClick={() => handleSort("A")}> Sort Alphabetical</button>
       </div>
       <h3 style={{ textAlign: "center" }}>
         Number Of Projects: {projectList.length}
