@@ -3,11 +3,11 @@ import { imageLinkConversion } from "../imageLinkToOb";
 import { projectDataInterface } from "../projects";
 import { SketchButtons } from "../sketchButtons";
 
-interface PlanetOrbitsPageProps {
+interface PosenetPageProps {
   data: projectDataInterface;
 }
 
-export function PlanetOrbitsPage({ data }: PlanetOrbitsPageProps): JSX.Element {
+export function PosenetPage({ data }: PosenetPageProps): JSX.Element {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { imageLinkConversion } from "../imageLinkToOb";
 import { projectDataInterface } from "../projects";
 import { SketchButtons } from "../sketchButtons";
-import ObjectManipulation from "../sketches/objectManipulation";
 
 interface ObjectManipulationPageProps {
   data: projectDataInterface;

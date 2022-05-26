@@ -7,7 +7,9 @@ import { ElectricParticlesPage } from "../utils/Project Pages/ElectricParticlesP
 import { FireworksPage } from "../utils/Project Pages/FireworksPage";
 import { InfiniteCityPage } from "../utils/Project Pages/InfiniteCityPage";
 import { ObjectManipulationPage } from "../utils/Project Pages/ObjectManipulationPage";
+import { PastebinPage } from "../utils/Project Pages/PastebinPage";
 import { PlanetOrbitsPage } from "../utils/Project Pages/PlanetOrbitsPage";
+import { PosenetPage } from "../utils/Project Pages/PosenetPage";
 import { PrintArtPage } from "../utils/Project Pages/PrintArtPage";
 import { RotatingTumblersPage } from "../utils/Project Pages/RotatingTumblersPage";
 import { StarfieldPage } from "../utils/Project Pages/StarfieldPage";
@@ -76,6 +78,12 @@ export function ProjectPage({ projectPage }: ProjectPageProps): JSX.Element {
       )}
       {projectPage === "Object Manipulation" && (
         <ObjectManipulationPage data={projectInformation[15]} />
+      )}
+      {projectPage === "Posenet Glasses" && (
+        <PosenetPage data={projectInformation[16]} />
+      )}
+      {projectPage === "Pastebin App" && (
+        <PastebinPage data={projectInformation[17]} />
       )}
     </>
   );

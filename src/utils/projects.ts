@@ -355,24 +355,42 @@ export const projectInformation: projectDataInterface[] = [
     id: 17,
     title: "Posenet Glasses",
     project: "Posenet Glasses",
-    artisticDesc: "",
-    technicalDesc: "",
+    artisticDesc:
+      "Using an artificial intelligence API called Posenet to draw Elton John glasses on your face! These will work on multiple people in the same frame and use the distance between the eyes to scale the size of the stars.",
+    technicalDesc:
+      "The Posenet AI can detect 17 different poses, and passes a confidence rating to the sketch. As such, it can be declared that the glasses will only be drawn on the user if the AI is confident enough that they are indeed eyes. This makes the project more robust and less likely to end up with stars on your ears!",
     tags: ["p5.js", "posenet", "AI", "API"],
     img: ["images/screenshots/posenet.jpg"],
     url: ["https://openprocessing.org/sketch/1569837"],
-    reflection: "",
+    reflection:
+      "I'm really interested in AI and machine learning, so this was a really interesting starting point to the world of self-learning computers. Also, I could practice at using what information I could get to solve problems, such as scaling the stars. Without information on distance from screen or similar, I had to get creative to deicde how big to draw the stars.",
     instructions: "",
   },
   {
     id: 18,
     title: "Pastebin App",
     project: "Pastebin App",
-    artisticDesc: "",
-    technicalDesc: "",
-    tags: ["react", "fullstack", "TypeScript", "Express", "SQL"],
+    artisticDesc:
+      "This was a 3 person fullstack project based on a pastebin where users can visit the site and store text, comment, and retrieve stored text.",
+    technicalDesc:
+      "Postres SQL is used to give persistence to the application, accessed via an Express backend. The frontend is created using React. The database is normalised following convention in the field.",
+    tags: [
+      "react",
+      "fullstack",
+      "TypeScript",
+      "Express",
+      "SQL",
+      "frontend",
+      "backend",
+    ],
     img: ["images/screenshots/pastebin.jpg"],
-    url: ["https://pastebins-frontend.netlify.app/"],
-    reflection: "",
+    url: [
+      "https://pastebins-frontend.netlify.app/",
+      "https://github.com/NobeenIslam/pastebins-frontend",
+      "https://github.com/NobeenIslam/pastebins-server",
+    ],
+    reflection:
+      "This was one of the first complete fullstack apps I've been a part of making and it was a great experience to see how all the components fit together.",
     instructions: "",
   },
   {
