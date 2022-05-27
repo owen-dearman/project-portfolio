@@ -3,7 +3,9 @@ import { navOptions, projectOptions } from "../App";
 import { BabyNamesPage } from "../utils/Project Pages/BabyNamesPage";
 import { BattordlePage } from "../utils/Project Pages/BattordlePage";
 import { CirclePackingPage } from "../utils/Project Pages/CirclePackingPage";
+import { DogVotingPage } from "../utils/Project Pages/DogVotingPage";
 import { ElectricParticlesPage } from "../utils/Project Pages/ElectricParticlesPage";
+import { FavPlacesPage } from "../utils/Project Pages/FavPlacesPage";
 import { FireworksPage } from "../utils/Project Pages/FireworksPage";
 import { InfiniteCityPage } from "../utils/Project Pages/InfiniteCityPage";
 import { ObjectManipulationPage } from "../utils/Project Pages/ObjectManipulationPage";
@@ -31,59 +33,65 @@ export function ProjectPage({ projectPage }: ProjectPageProps): JSX.Element {
   }, []);
   return (
     <>
-      {projectPage === "Electric Particles" && (
-        <ElectricParticlesPage data={projectInformation[0]} />
-      )}
-      {projectPage === "Print Art" && (
-        <PrintArtPage data={projectInformation[1]} />
-      )}
-      {projectPage === "Single Worm Walker" && (
-        <WormWalkerPage data={projectInformation[2]} />
-      )}
-      {projectPage === "Trail Drawing" && (
-        <TrailDrawingPage data={projectInformation[3]} />
-      )}
-      {projectPage === "3D Box With Spheres" && (
-        <ThreeDCubePage data={projectInformation[4]} />
-      )}
-      {projectPage === "Rotating Tumblers" && (
-        <RotatingTumblersPage data={projectInformation[5]} />
-      )}
-      {projectPage === "Circle Packing" && (
-        <CirclePackingPage data={projectInformation[6]} />
+      {projectPage === "Worm Olympics" && (
+        <WormOlympicsPage data={projectInformation[0]} />
       )}
       {projectPage === "Battordle" && (
-        <BattordlePage data={projectInformation[7]} />
+        <BattordlePage data={projectInformation[1]} />
       )}
-      {projectPage === "Baby Names" && (
-        <BabyNamesPage data={projectInformation[8]} />
-      )}
-      {projectPage === "TV Database" && (
-        <TVShowsPage data={projectInformation[9]} />
-      )}
-      {projectPage === "Worm Olympics" && (
-        <WormOlympicsPage data={projectInformation[10]} />
+      {projectPage === "Pastebin App" && (
+        <PastebinPage data={projectInformation[2]} />
       )}
       {projectPage === "Fireworks" && (
-        <FireworksPage data={projectInformation[11]} />
+        <FireworksPage data={projectInformation[3]} />
+      )}
+      {projectPage === "Dog Voting App" && (
+        <DogVotingPage data={projectInformation[4]} />
+      )}
+      {projectPage === "Posenet Glasses" && (
+        <PosenetPage data={projectInformation[5]} />
+      )}
+      {projectPage === "Electric Particles" && (
+        <ElectricParticlesPage data={projectInformation[6]} />
+      )}
+      {projectPage === "Print Art" && (
+        <PrintArtPage data={projectInformation[7]} />
+      )}
+      {projectPage === "Single Worm Walker" && (
+        <WormWalkerPage data={projectInformation[8]} />
+      )}
+      {projectPage === "Trail Drawing" && (
+        <TrailDrawingPage data={projectInformation[9]} />
+      )}
+      {projectPage === "3D Box With Spheres" && (
+        <ThreeDCubePage data={projectInformation[10]} />
+      )}
+      {projectPage === "Planet Orbits" && (
+        <PlanetOrbitsPage data={projectInformation[11]} />
       )}
       {projectPage === "Starfield" && (
         <StarfieldPage data={projectInformation[12]} />
       )}
-      {projectPage === "Infinite City Driver" && (
-        <InfiniteCityPage data={projectInformation[13]} />
+      {projectPage === "Circle Packing" && (
+        <CirclePackingPage data={projectInformation[13]} />
       )}
-      {projectPage === "Planet Orbits" && (
-        <PlanetOrbitsPage data={projectInformation[14]} />
+      {projectPage === "Rotating Tumblers" && (
+        <RotatingTumblersPage data={projectInformation[14]} />
+      )}
+      {projectPage === "TV Database" && (
+        <TVShowsPage data={projectInformation[15]} />
+      )}
+      {projectPage === "Infinite City Driver" && (
+        <InfiniteCityPage data={projectInformation[16]} />
       )}
       {projectPage === "Object Manipulation" && (
-        <ObjectManipulationPage data={projectInformation[15]} />
+        <ObjectManipulationPage data={projectInformation[17]} />
       )}
-      {projectPage === "Posenet Glasses" && (
-        <PosenetPage data={projectInformation[16]} />
+      {projectPage === "Baby Names" && (
+        <BabyNamesPage data={projectInformation[18]} />
       )}
-      {projectPage === "Pastebin App" && (
-        <PastebinPage data={projectInformation[17]} />
+      {projectPage === "Favourite Places" && (
+        <FavPlacesPage data={projectInformation[19]} />
       )}
     </>
   );

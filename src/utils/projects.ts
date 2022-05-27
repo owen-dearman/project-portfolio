@@ -16,6 +16,155 @@ export interface projectDataInterface {
 export const projectInformation: projectDataInterface[] = [
   {
     id: 1,
+    title: "Worm Olympics",
+    project: "Worm Olympics",
+    artisticDesc:
+      "A series of p5.js sketches creating a remote multiplayer game revolving around betting on the worm you think will win a sprint race.",
+    technicalDesc:
+      "This sketch uses socket.io to talk between sketches relaying live race information and the voting information. It involves some retro graphics and object storage like the single random walker sketch.",
+    tags: [
+      "p5.js",
+      "JavaScript",
+      "socket.io",
+      "animation",
+      "game",
+      "collision detection",
+      "2D",
+      "algorithm",
+    ],
+    img: [
+      "images/screenshots/wormOlympics.jpg",
+      "images/screenshots/wormOlympicsVoting.jpg",
+    ],
+    url: [
+      "https://openprocessing.org/sketch/1509211",
+      "https://openprocessing.org/sketch/1530348",
+    ],
+    reflection:
+      "This was the biggest project I'd undertaken to this point and I'm really pleased with how it turned out. There are a lot of components which had to be considered and it was really beneficial to be using an editor other than VS Code to get a handle on the importance of organisation when programming.",
+    instructions: "",
+  },
+  {
+    id: 2,
+    title: "Battordle",
+    project: "Battordle",
+    artisticDesc:
+      "A two player 'pass-the-phone', live Wordle-inspired game where one player picks a 5 letter word and the other player attempts to correctly guess it.",
+    technicalDesc:
+      "A frontend application built in TypeScript with React based around the Wordle algorithm. This app contains unit testing to monitor the scoring algorithm and dictionaries to handle the marking of a guess. The grid is created using CSS flexboxes. This app also contains API checking of word inputs against a dictionary.",
+    tags: [
+      "react",
+      "TypeScript",
+      "algorithms",
+      "game",
+      "front-end",
+      "CSS",
+      "frontend",
+    ],
+    img: ["images/screenshots/battordle.jpg"],
+    url: [
+      "https://battordle.netlify.app",
+      "https://github.com/owen-dearman/wordle-2-player",
+    ],
+    reflection:
+      "This app was produced after a problem-solving session designed around the Wordle scoring algorithm. It is purely a front-end application and so has no persistence, but is suitable as a quick game between two word lovers.",
+    instructions: "",
+  },
+  {
+    id: 3,
+    title: "Pastebin App",
+    project: "Pastebin App",
+    artisticDesc:
+      "This was a 3 person fullstack project based on a pastebin where users can visit the site and store text, comment, and retrieve stored text.",
+    technicalDesc:
+      "Postres SQL is used to give persistence to the application, accessed via an Express backend. The frontend is created using React. The database is normalised following convention in the field.",
+    tags: [
+      "react",
+      "fullstack",
+      "TypeScript",
+      "Express",
+      "SQL",
+      "frontend",
+      "backend",
+    ],
+    img: ["images/screenshots/pastebin.jpg"],
+    url: [
+      "https://pastebins-frontend.netlify.app/",
+      "https://github.com/NobeenIslam/pastebins-frontend",
+      "https://github.com/NobeenIslam/pastebins-server",
+    ],
+    reflection:
+      "This was one of the first complete fullstack apps I've been a part of making and it was a great experience to see how all the components fit together.",
+    instructions: "",
+  },
+  {
+    id: 4,
+    title: "Fireworks Display",
+    project: "Fireworks",
+    artisticDesc:
+      "A series of animations based on the physics and aesthetics of a night time fireworks display. This project contains three animations: an automated display set infront of a large moon; a display where fireworks are triggered by mouse click and travel to the mouse position before exploding; and an animation where embers are created and fall to the ground based on the user dragging the mouse.",
+    technicalDesc:
+      "A firework is constructed of a line drawn between its current position vector and its previous position vector. The firework moves when a velocity vector is applied to the position vector, with a small smount of random acceleration. The firework is created with a fuse, which decreases by 1 every frame until 0, when the firework 'explodes.' The explosion consists of the creation of a number of particles, drawn the same way as the fireworks, but with added aesthetic styling. These accelerate away from the point of explosion in 360 degrees, with a gravity acting upon them. The embers have a random age and once this is reached, they are removed from the object storage which allows the sketch to continue without excess unused data being stored.",
+    tags: [
+      "p5.js",
+      "animation",
+      "2D",
+      "vectors",
+      "algorithm",
+      "physics",
+      "JavaScript",
+      "particle system",
+    ],
+    img: [
+      "images/screenshots/fireworks1.jpg",
+      "images/screenshots/fireworks2.jpg",
+      "images/screenshots/embers.jpg",
+    ],
+    url: [
+      "https://openprocessing.org/sketch/1558632",
+      "https://openprocessing.org/sketch/1558427",
+      "https://openprocessing.org/sketch/1555314",
+    ],
+    reflection:
+      "When I started creative coding using p5.js, my goal was to create a fireworks display. The majority of my sketches, other than learning the basics of p5.js have been building to this sketch. I'm extremely proud of how it has turned out, including some very realistic physics with the wobbling fireworks and explosion particles that waft downwards. This series of sketches taught me the most about vectors, including the different methods to use on them in the p5.js library.",
+    instructions: "Press 't' to change firework style.",
+  },
+  {
+    id: 5,
+    title: "Dog Voting App",
+    project: "Dog Voting App",
+    artisticDesc:
+      "A fullstack app that I was a part of producing with a frontend in TypeScript and React and a backend in Express and SQL. The user is presented with photos from two dog breeds, fetched from an API. They can vote on their favourite dog from the two and see a leaderboard of how others have voted.",
+    technicalDesc:
+      "This app involves repetitive fetching data from an external API was good practice for promises and data manipulation and storage. Handling http requests from both an external API and the backend involved an effort to maintain documentation and structure to avoid confusion and loss of data.",
+    tags: ["react", "fullstack", "TypeScript", "Express", "SQL", "API"],
+    img: ["images/screenshots/dogVoting.jpg"],
+    url: [
+      "https://saj-zeri-patelman-dogvotes.netlify.app/",
+      "https://github.com/sajsiv/DogBreedFrontend",
+      "https://github.com/roshnihpatel/Dog-Breed-Voting-Backend",
+    ],
+    reflection:
+      "The was an interesting project to be a part of, as on the surface there doesn't seem to be much to it. However, there's a great effort to keep everything clean and robust, and to account for fluctuations in the data. Some examples of this include being able to refresh the leaderboard and fetching new images of the same dog breed for comparison.",
+    instructions: "",
+  },
+  {
+    id: 6,
+    title: "Posenet Glasses",
+    project: "Posenet Glasses",
+    artisticDesc:
+      "Using an artificial intelligence API called Posenet to draw Elton John glasses on your face! These will work on multiple people in the same frame and use the distance between the eyes to scale the size of the stars.",
+    technicalDesc:
+      "The Posenet AI can detect 17 different poses, and passes a confidence rating to the sketch. As such, it can be declared that the glasses will only be drawn on the user if the AI is confident enough that they are indeed eyes. This makes the project more robust and less likely to end up with stars on your ears!",
+    tags: ["p5.js", "posenet", "AI", "API"],
+    img: ["images/screenshots/posenet.jpg"],
+    url: ["https://openprocessing.org/sketch/1569837"],
+    reflection:
+      "I'm really interested in AI and machine learning, so this was a really interesting starting point to the world of self-learning computers. Also, I could practice at using what information I could get to solve problems, such as scaling the stars. Without information on distance from screen or similar, I had to get creative to deicde how big to draw the stars.",
+    instructions: "",
+  },
+  {
+    id: 7,
     title: "Electric Particles",
     project: "Electric Particles",
     artisticDesc:
@@ -40,7 +189,7 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "Move the mouse around to connect with nearby particles",
   },
   {
-    id: 2,
+    id: 8,
     title: "C64 Print Art",
     project: "Print Art",
     artisticDesc:
@@ -71,7 +220,7 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "Try 'z' to change colour palette",
   },
   {
-    id: 3,
+    id: 9,
     title: "Pseudo-Random Worm Walker",
     project: "Single Worm Walker",
     artisticDesc:
@@ -86,7 +235,7 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "Click the mouse to reposition the walker",
   },
   {
-    id: 4,
+    id: 10,
     title: "Trail Drawing",
     project: "Trail Drawing",
     artisticDesc:
@@ -109,7 +258,7 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "Move the mouse around to create a symmetrical drawing",
   },
   {
-    id: 5,
+    id: 11,
     title: "3D Cube Simulation",
     project: "3D Box With Spheres",
     artisticDesc:
@@ -124,158 +273,19 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "Press '1' to remove all spheres, '2' to add more",
   },
   {
-    id: 6,
-    title: "Rotating Tumblers",
-    project: "Rotating Tumblers",
-    artisticDesc:
-      "A selection of scaled spinning arcs with their own rotation around the centre, coloured randomly from a palette.",
-    technicalDesc:
-      "Systematically spaced arcs which rotate clockwise or counter-clockwise, depending on a random selection decided at arc creation, with a random speed. Colour is assigned randomly at this stage from a palette.",
-    tags: ["p5.js", "animation", "2D", "JavaScript"],
-    img: ["images/screenshots/rotation.jpg"],
-    url: ["https://openprocessing.org/sketch/1506703"],
-    reflection:
-      "Rotation is one of the harder concepts in p5.js and so this sketch acts as a baseline for working with rotation. Having each tumbler have it's own rotation is a step up on having all tumblers have the same rotation, which gives another dimension to the sketch.",
-    instructions: "Press spacebar to reset",
-  },
-  {
-    id: 7,
-    title: "Circle Packing",
-    project: "Circle Packing",
-    artisticDesc:
-      "Randomly generated circles packed into a canvas, plugged into an algorithm that means they cannot overlap with any other circles.",
-    technicalDesc:
-      "The distance between the edges of each new circle is calculated against the position of every circle that has previously been generated. If a collision is detected, then the circle is not drawn onto the sketch. Circle diamater is pseudo-randomly generated based on a gaussian distribution. The sketch is automatically regenerated every second.",
-    tags: ["p5.js", "2D", "algorithms", "collision detection", "JavaScript"],
-    img: ["images/screenshots/circlePacking.jpg"],
-    url: ["https://openprocessing.org/sketch/1544664"],
-    reflection:
-      "This sketch was created to solve the problem of overlapping elements when using collision detection. Igt involves a step-by-step algorithm to avoid such collisions. It can be developed further to attempt circle position regeneration when a collision is detected in a while loop, with a regulatory counter to avoid infinite loops.",
-    instructions: "",
-  },
-  {
-    id: 8,
-    title: "Battordle",
-    project: "Battordle",
-    artisticDesc:
-      "A two player 'pass-the-phone', live Wordle-inspired game where one player picks a 5 letter word and the other player attempts to correctly guess it.",
-    technicalDesc:
-      "A frontend application built in TypeScript with React based around the Wordle algorithm. This app contains unit testing to monitor the scoring algorithm and dictionaries to handle the marking of a guess. The grid is created using CSS flexboxes. This app also contains API checking of word inputs against a dictionary.",
-    tags: [
-      "react",
-      "TypeScript",
-      "algorithms",
-      "game",
-      "front-end",
-      "CSS",
-      "frontend",
-    ],
-    img: ["images/screenshots/battordle.jpg"],
-    url: [
-      "https://battordle.netlify.app",
-      "https://github.com/owen-dearman/wordle-2-player",
-    ],
-    reflection:
-      "This app was produced after a problem-solving session designed around the Wordle scoring algorithm. It is purely a front-end application and so has no persistence, but is suitable as a quick game between two word lovers.",
-    instructions: "",
-  },
-  {
-    id: 9,
-    title: "Baby Names App",
-    project: "Baby Names",
-    artisticDesc:
-      "A front-end application for users to produce a favourites list of baby names, search for names, filter by gender, and download their picked names.",
-    technicalDesc:
-      "A frontend application built in TypeScript with React based around useStates and filtering an array of objects (baby names). This is a very early project undertaken during the fulltime scholarship at Academy and contains no backend persistence or API conenction.",
-    tags: ["react", "TypeScript", "front-end", "CSS", "frontend"],
-    img: ["images/screenshots/babyNames.jpg"],
-    url: [
-      "https://owend-baby-names.netlify.app/",
-      "https://github.com/owen-dearman/baby-names-V2",
-    ],
-    reflection:
-      "Whilst completing it, this project was difficult due to the novelty of the tools available. However, after much more training in React and TypeScript, I am much more comfortable with the languages, as well as useStates, useEffect, and other methods.",
-    instructions: "",
-  },
-  {
-    id: 10,
-    title: "TV Database",
-    project: "TV Database",
-    artisticDesc:
-      "A front-end React app utilising the TVMaze API to organise information regarding popular TV shows and series.",
-    technicalDesc:
-      "This front-end application is built in TypeScript with React and fetches information from an API and displays the series and show data in React components. Users can explore the content and add shows to a favourites list.",
-    tags: ["react", "TypeScript", "frontend", "CSS", "API"],
-    img: ["images/screenshots/tvdatabase.jpg"],
-    url: [
-      "https://tv-shows-info.netlify.app/",
-      "https://github.com/owen-dearman/react-tv-shows",
-    ],
-    reflection:
-      "This was a paired project of which I was a part, completed about halfway through the fulltime scholarship at Academy. I still go back to this project to recap on various aspects of React that I haven't needed in a while. This was also one of my first experiences at paired programming.",
-    instructions: "",
-  },
-  {
-    id: 11,
-    title: "Worm Olympics",
-    project: "Worm Olympics",
-    artisticDesc:
-      "A series of p5.js sketches creating a remote multiplayer game revolving around betting on the worm you think will win a sprint race.",
-    technicalDesc:
-      "This sketch uses socket.io to talk between sketches relaying live race information and the voting information. It involves some retro graphics and object storage like the single random walker sketch.",
-    tags: [
-      "p5.js",
-      "JavaScript",
-      "socket.io",
-      "animation",
-      "game",
-      "collision detection",
-      "2D",
-      "algorithm",
-    ],
-    img: [
-      "images/screenshots/wormOlympics.jpg",
-      "images/screenshots/wormOlympicsVoting.jpg",
-    ],
-    url: [
-      "https://openprocessing.org/sketch/1509211",
-      "https://openprocessing.org/sketch/1530348",
-    ],
-    reflection:
-      "This was the biggest project I'd undertaken to this point and I'm really pleased with how it turned out. There are a lot of components which had to be considered and it was really beneficial to be using an editor other than VS Code to get a handle on the importance of organisation when programming.",
-    instructions: "",
-  },
-  {
     id: 12,
-    title: "Fireworks Display",
-    project: "Fireworks",
+    title: "Planet Orbits",
+    project: "Planet Orbits",
     artisticDesc:
-      "A series of animations based on the physics and aesthetics of a night time fireworks display. This project contains three animations: an automated display set infront of a large moon; a display where fireworks are triggered by mouse click and travel to the mouse position before exploding; and an animation where embers are created and fall to the ground based on the user dragging the mouse.",
+      "A simulation of a solar system with a selection of textured planets and moons orbiting a sun. This sketch was build using p5.js with textures from www.solarsystemscope.com/textures. ",
     technicalDesc:
-      "A firework is constructed of a line drawn between its current position vector and its previous position vector. The firework moves when a velocity vector is applied to the position vector, with a small smount of random acceleration. The firework is created with a fuse, which decreases by 1 every frame until 0, when the firework 'explodes.' The explosion consists of the creation of a number of particles, drawn the same way as the fireworks, but with added aesthetic styling. These accelerate away from the point of explosion in 360 degrees, with a gravity acting upon them. The embers have a random age and once this is reached, they are removed from the object storage which allows the sketch to continue without excess unused data being stored.",
-    tags: [
-      "p5.js",
-      "animation",
-      "2D",
-      "vectors",
-      "algorithm",
-      "physics",
-      "JavaScript",
-      "particle system",
-    ],
-    img: [
-      "images/screenshots/fireworks1.jpg",
-      "images/screenshots/fireworks2.jpg",
-      "images/screenshots/embers.jpg",
-    ],
-    url: [
-      "https://openprocessing.org/sketch/1558632",
-      "https://openprocessing.org/sketch/1558427",
-      "https://openprocessing.org/sketch/1555314",
-    ],
+      "This project concerns several types of rotation. Firstly, each planet rotates on the Y axis around the sun, with varying speed and orbit size but all counter clockwise. Secondly, all planets rotate on the Y axis around their own position, much like the Earth does every day. Likewise, a point light from the sun is created to simulate day and night in this universe. Thirdly, the moon and rings also orbit around their respective planet. The moon rotates on the Y axis, and the ring rotates on the X and Z axes.",
+    tags: ["p5.js", "3D", "physics"],
+    img: ["images/screenshots/planetOrbits.jpg"],
+    url: ["https://openprocessing.org/sketch/1581050"],
     reflection:
-      "When I started creative coding using p5.js, my goal was to create a fireworks display. The majority of my sketches, other than learning the basics of p5.js have been building to this sketch. I'm extremely proud of how it has turned out, including some very realistic physics with the wobbling fireworks and explosion particles that waft downwards. This series of sketches taught me the most about vectors, including the different methods to use on them in the p5.js library.",
-    instructions: "Press 't' to change firework style.",
+      "Despite apparent major differences between this sketch and Rotating Tumblers, there are a lot of shared aspects between the two sketches. For example, the functionality of rotating an element around the origin is replicated here as the planets orbit the sun which has been drawn on (0,0,0). This was an interesting sketch to build and is all the more impressive for the high quality textures to make the worlds more lifelike.",
+    instructions: "",
   },
   {
     id: 13,
@@ -308,6 +318,54 @@ export const projectInformation: projectDataInterface[] = [
   },
   {
     id: 14,
+    title: "Circle Packing",
+    project: "Circle Packing",
+    artisticDesc:
+      "Randomly generated circles packed into a canvas, plugged into an algorithm that means they cannot overlap with any other circles.",
+    technicalDesc:
+      "The distance between the edges of each new circle is calculated against the position of every circle that has previously been generated. If a collision is detected, then the circle is not drawn onto the sketch. Circle diamater is pseudo-randomly generated based on a gaussian distribution. The sketch is automatically regenerated every second.",
+    tags: ["p5.js", "2D", "algorithms", "collision detection", "JavaScript"],
+    img: ["images/screenshots/circlePacking.jpg"],
+    url: ["https://openprocessing.org/sketch/1544664"],
+    reflection:
+      "This sketch was created to solve the problem of overlapping elements when using collision detection. Igt involves a step-by-step algorithm to avoid such collisions. It can be developed further to attempt circle position regeneration when a collision is detected in a while loop, with a regulatory counter to avoid infinite loops.",
+    instructions: "",
+  },
+  {
+    id: 15,
+    title: "Rotating Tumblers",
+    project: "Rotating Tumblers",
+    artisticDesc:
+      "A selection of scaled spinning arcs with their own rotation around the centre, coloured randomly from a palette.",
+    technicalDesc:
+      "Systematically spaced arcs which rotate clockwise or counter-clockwise, depending on a random selection decided at arc creation, with a random speed. Colour is assigned randomly at this stage from a palette.",
+    tags: ["p5.js", "animation", "2D", "JavaScript"],
+    img: ["images/screenshots/rotation.jpg"],
+    url: ["https://openprocessing.org/sketch/1506703"],
+    reflection:
+      "Rotation is one of the harder concepts in p5.js and so this sketch acts as a baseline for working with rotation. Having each tumbler have it's own rotation is a step up on having all tumblers have the same rotation, which gives another dimension to the sketch.",
+    instructions: "Press spacebar to reset",
+  },
+  {
+    id: 16,
+    title: "TV Database",
+    project: "TV Database",
+    artisticDesc:
+      "A front-end React app utilising the TVMaze API to organise information regarding popular TV shows and series.",
+    technicalDesc:
+      "This front-end application is built in TypeScript with React and fetches information from an API and displays the series and show data in React components. Users can explore the content and add shows to a favourites list.",
+    tags: ["react", "TypeScript", "frontend", "CSS", "API"],
+    img: ["images/screenshots/tvdatabase.jpg"],
+    url: [
+      "https://tv-shows-info.netlify.app/",
+      "https://github.com/owen-dearman/react-tv-shows",
+    ],
+    reflection:
+      "This was a paired project of which I was a part, completed about halfway through the fulltime scholarship at Academy. I still go back to this project to recap on various aspects of React that I haven't needed in a while. This was also one of my first experiences at paired programming.",
+    instructions: "",
+  },
+  {
+    id: 17,
     title: "Infinite City Driver",
     project: "Infinite City Driver",
     artisticDesc:
@@ -322,22 +380,7 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "Move the mouse along the X axis to steer the car.",
   },
   {
-    id: 15,
-    title: "Planet Orbits",
-    project: "Planet Orbits",
-    artisticDesc:
-      "A simulation of a solar system with a selection of textured planets and moons orbiting a sun. This sketch was build using p5.js with textures from www.solarsystemscope.com/textures. ",
-    technicalDesc:
-      "This project concerns several types of rotation. Firstly, each planet rotates on the Y axis around the sun, with varying speed and orbit size but all counter clockwise. Secondly, all planets rotate on the Y axis around their own position, much like the Earth does every day. Likewise, a point light from the sun is created to simulate day and night in this universe. Thirdly, the moon and rings also orbit around their respective planet. The moon rotates on the Y axis, and the ring rotates on the X and Z axes.",
-    tags: ["p5.js", "3D", "physics"],
-    img: ["images/screenshots/planetOrbits.jpg"],
-    url: ["https://openprocessing.org/sketch/1581050"],
-    reflection:
-      "Despite apparent major differences between this sketch and Rotating Tumblers, there are a lot of shared aspects between the two sketches. For example, the functionality of rotating an element around the origin is replicated here as the planets orbit the sun which has been drawn on (0,0,0). This was an interesting sketch to build and is all the more impressive for the high quality textures to make the worlds more lifelike.",
-    instructions: "",
-  },
-  {
-    id: 16,
+    id: 18,
     title: "Object Manipulation",
     project: "Object Manipulation",
     artisticDesc:
@@ -352,69 +395,39 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "",
   },
   {
-    id: 17,
-    title: "Posenet Glasses",
-    project: "Posenet Glasses",
-    artisticDesc:
-      "Using an artificial intelligence API called Posenet to draw Elton John glasses on your face! These will work on multiple people in the same frame and use the distance between the eyes to scale the size of the stars.",
-    technicalDesc:
-      "The Posenet AI can detect 17 different poses, and passes a confidence rating to the sketch. As such, it can be declared that the glasses will only be drawn on the user if the AI is confident enough that they are indeed eyes. This makes the project more robust and less likely to end up with stars on your ears!",
-    tags: ["p5.js", "posenet", "AI", "API"],
-    img: ["images/screenshots/posenet.jpg"],
-    url: ["https://openprocessing.org/sketch/1569837"],
-    reflection:
-      "I'm really interested in AI and machine learning, so this was a really interesting starting point to the world of self-learning computers. Also, I could practice at using what information I could get to solve problems, such as scaling the stars. Without information on distance from screen or similar, I had to get creative to deicde how big to draw the stars.",
-    instructions: "",
-  },
-  {
-    id: 18,
-    title: "Pastebin App",
-    project: "Pastebin App",
-    artisticDesc:
-      "This was a 3 person fullstack project based on a pastebin where users can visit the site and store text, comment, and retrieve stored text.",
-    technicalDesc:
-      "Postres SQL is used to give persistence to the application, accessed via an Express backend. The frontend is created using React. The database is normalised following convention in the field.",
-    tags: [
-      "react",
-      "fullstack",
-      "TypeScript",
-      "Express",
-      "SQL",
-      "frontend",
-      "backend",
-    ],
-    img: ["images/screenshots/pastebin.jpg"],
-    url: [
-      "https://pastebins-frontend.netlify.app/",
-      "https://github.com/NobeenIslam/pastebins-frontend",
-      "https://github.com/NobeenIslam/pastebins-server",
-    ],
-    reflection:
-      "This was one of the first complete fullstack apps I've been a part of making and it was a great experience to see how all the components fit together.",
-    instructions: "",
-  },
-  {
     id: 19,
-    title: "Dog Voting App",
-    project: "Dog Voting App",
-    artisticDesc: "",
-    technicalDesc: "",
-    tags: ["react", "fullstack", "TypeScript", "Express", "SQL", "API"],
-    img: ["images/screenshots/dogVoting.jpg"],
-    url: ["https://saj-zeri-patelman-dogvotes.netlify.app/"],
-    reflection: "",
+    title: "Baby Names App",
+    project: "Baby Names",
+    artisticDesc:
+      "A front-end application for users to produce a favourites list of baby names, search for names, filter by gender, and download their picked names.",
+    technicalDesc:
+      "A frontend application built in TypeScript with React based around useStates and filtering an array of objects (baby names). This is a very early project undertaken during the fulltime scholarship at Academy and contains no backend persistence or API conenction.",
+    tags: ["react", "TypeScript", "front-end", "CSS", "frontend"],
+    img: ["images/screenshots/babyNames.jpg"],
+    url: [
+      "https://owend-baby-names.netlify.app/",
+      "https://github.com/owen-dearman/baby-names-V2",
+    ],
+    reflection:
+      "Whilst completing it, this project was difficult due to the novelty of the tools available. However, after much more training in React and TypeScript, I am much more comfortable with the languages, as well as useStates, useEffect, and other methods.",
     instructions: "",
   },
   {
     id: 20,
     title: "Favourite Places",
     project: "Favourite Places",
-    artisticDesc: "",
-    technicalDesc: "",
+    artisticDesc:
+      "My first frontend project which details a selection of my favourite places. ",
+    technicalDesc:
+      "This app is built using React and TypeScript and contains no persistance. It uses the map() function to iterate through a json document containing the details of each place, transforming them into JSX elements.",
     tags: ["react", "frontend", "TypeScript"],
     img: ["images/screenshots/favPlaces.jpg"],
-    url: ["https://owen-fav-places.netlify.app/"],
-    reflection: "",
+    url: [
+      "https://owen-fav-places.netlify.app/",
+      "https://github.com/owen-dearman/favourite-places/tree/main/src/components",
+    ],
+    reflection:
+      "The start of a journey! This app was made after the first week of learning React and I've included it here as it highlights the improvement in my skills over a relatively short space of time. It also shows some experimentation I've done with CSS to see what exactly is possible.",
     instructions: "",
   },
 ];
