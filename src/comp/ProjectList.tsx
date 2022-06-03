@@ -21,6 +21,7 @@ export function ProjectList({
   const [searchInput, setSearchInput] = useState<string>("");
   const [projects, setProjects] = useState<projectDataInterface[]>([]);
   const [Toggle, setToggle] = useState<boolean>(false);
+  const [activeSort, setActiveSort] = useState<SortType>("R");
 
   useEffect(() => {
     function fetchProjectData() {
@@ -64,8 +65,50 @@ export function ProjectList({
         <button onClick={() => setSearchInput("")}>Clear Search</button>
       </div>
       <div style={{ textAlign: "center" }}>
-        <button onClick={() => handleSort("R")}> Sort Relevance</button>
-        <button onClick={() => handleSort("A")}> Sort Alphabetical</button>
+        {activeSort === "R" ? (
+          <button
+            className="active"
+            onClick={() => {
+              handleSort("R");
+              setActiveSort("R");
+            }}
+          >
+            {" "}
+            Sort Relevance
+          </button>
+        ) : (
+          <button
+            onClick={() => {
+              handleSort("R");
+              setActiveSort("R");
+            }}
+          >
+            {" "}
+            Sort Relevance
+          </button>
+        )}
+        {activeSort === "A" ? (
+          <button
+            className="active"
+            onClick={() => {
+              handleSort("A");
+              setActiveSort("A");
+            }}
+          >
+            {" "}
+            Sort Alphabetical
+          </button>
+        ) : (
+          <button
+            onClick={() => {
+              handleSort("A");
+              setActiveSort("A");
+            }}
+          >
+            {" "}
+            Sort Alphabetical
+          </button>
+        )}
       </div>
       <h3 style={{ textAlign: "center" }}>
         Number Of Projects: {projectList.length}

@@ -29,7 +29,8 @@ export type projectOptions =
   | "Posenet Glasses"
   | "Pastebin App"
   | "Dog Voting App"
-  | "Favourite Places";
+  | "Favourite Places"
+  | "Corpsquad";
 
 function App(): JSX.Element {
   const [nav, setNav] = useState<navOptions>("home");

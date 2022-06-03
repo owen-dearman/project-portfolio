@@ -131,6 +131,32 @@ export const projectInformation: projectDataInterface[] = [
   },
   {
     id: 5,
+    title: "Project Dashboard",
+    project: "Corpsquad",
+    artisticDesc:
+      "A front-end app built for a provided API as part of the interview process for a comapny. The user can view all projects for a fictional company: CorpSquad Consultancy; as well as filter and sort the projects that fit their criteria. They can go to an employee or project page by clicking the relevant link, or by typing in the address bar.",
+    technicalDesc:
+      "This app makes use of useReducer to limit the number of useStates required by the app. As such, a dispatch function is passed down which takes a type and a payload if necessary to trigger the changes in the state. This allows a large number of complex filters, for example, to be handled by one object in the state. Secondly, React Router is used to handle browser changes such as refresh, the back button and typing in the address bar to navigate around the app.",
+    tags: [
+      "front-end",
+      "React",
+      "TypeScript",
+      "useReducer",
+      "React Router",
+      "API",
+    ],
+    img: ["images/screenshots/corpsquad.jpg"],
+    url: [
+      "https://corpsquad-dashboard-dearman.netlify.app/",
+      "https://github.com/owen-dearman/corpsquad-dashboard",
+    ],
+    reflection:
+      "This is the most complex front-end project to date. In order to complete it, I had to learn how to use useReducer and React Router during the build process, and refactor the project several times in order to meet the brief. However, since doing this project, I think I will use these two factors in most projects now due to the advantages they have over useState and conditional component rendering.",
+    instructions:
+      "The API is sleepful, therefore, may take some time to boot up if not used in a while!",
+  },
+  {
+    id: 6,
     title: "Dog Voting App",
     project: "Dog Voting App",
     artisticDesc:
@@ -149,7 +175,7 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "",
   },
   {
-    id: 6,
+    id: 7,
     title: "Posenet Glasses",
     project: "Posenet Glasses",
     artisticDesc:
@@ -164,7 +190,7 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "",
   },
   {
-    id: 7,
+    id: 8,
     title: "Electric Particles",
     project: "Electric Particles",
     artisticDesc:
@@ -189,7 +215,7 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "Move the mouse around to connect with nearby particles",
   },
   {
-    id: 8,
+    id: 9,
     title: "C64 Print Art",
     project: "Print Art",
     artisticDesc:
@@ -220,7 +246,7 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "Try 'z' to change colour palette",
   },
   {
-    id: 9,
+    id: 10,
     title: "Pseudo-Random Worm Walker",
     project: "Single Worm Walker",
     artisticDesc:
@@ -235,7 +261,7 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "Click the mouse to reposition the walker",
   },
   {
-    id: 10,
+    id: 11,
     title: "Trail Drawing",
     project: "Trail Drawing",
     artisticDesc:
@@ -258,7 +284,7 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "Move the mouse around to create a symmetrical drawing",
   },
   {
-    id: 11,
+    id: 12,
     title: "3D Cube Simulation",
     project: "3D Box With Spheres",
     artisticDesc:
@@ -273,7 +299,7 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "Press '1' to remove all spheres, '2' to add more",
   },
   {
-    id: 12,
+    id: 13,
     title: "Planet Orbits",
     project: "Planet Orbits",
     artisticDesc:
@@ -288,7 +314,7 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "",
   },
   {
-    id: 13,
+    id: 14,
     title: "Starfield",
     project: "Starfield",
     artisticDesc:
@@ -317,7 +343,7 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "Use 'w' to speed up and 's' to slow down",
   },
   {
-    id: 14,
+    id: 15,
     title: "Circle Packing",
     project: "Circle Packing",
     artisticDesc:
@@ -332,7 +358,7 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "",
   },
   {
-    id: 15,
+    id: 16,
     title: "Rotating Tumblers",
     project: "Rotating Tumblers",
     artisticDesc:
@@ -347,7 +373,7 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "Press spacebar to reset",
   },
   {
-    id: 16,
+    id: 17,
     title: "TV Database",
     project: "TV Database",
     artisticDesc:
@@ -365,7 +391,7 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "",
   },
   {
-    id: 17,
+    id: 18,
     title: "Infinite City Driver",
     project: "Infinite City Driver",
     artisticDesc:
@@ -380,7 +406,7 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "Move the mouse along the X axis to steer the car.",
   },
   {
-    id: 18,
+    id: 19,
     title: "Object Manipulation",
     project: "Object Manipulation",
     artisticDesc:
@@ -395,7 +421,7 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "",
   },
   {
-    id: 19,
+    id: 20,
     title: "Baby Names App",
     project: "Baby Names",
     artisticDesc:
@@ -413,7 +439,7 @@ export const projectInformation: projectDataInterface[] = [
     instructions: "",
   },
   {
-    id: 20,
+    id: 21,
     title: "Favourite Places",
     project: "Favourite Places",
     artisticDesc:
